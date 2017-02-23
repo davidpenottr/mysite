@@ -23,12 +23,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'rv2kvi5kl*zdc8hma7rrla@!-_^f9r%5sldav6*$gyiop)#twg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['davepenott.pythonanywhere.com']
 
 STATIC_URL = '/static/'
 # Application definition
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 INSTALLED_APPS = [
     'home.apps.HomeConfig',
